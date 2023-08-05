@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+*{
+    padding:0px;
+    margin:0px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+body::-webkit-scrollbar {
+    display:none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bar{
+    display: flex;
+    gap:32%;
+    padding:10px 20px ;
+    font-size: 12px;
+    color:white;
+    background-color: #F05A22;
+    align-items: center;
+    box-shadow:0px 0px 10px #F05A22;
+}
+.section{
+    display:flex;
+    align-items: center;
+    gap:50px;
+    background: white;
+    padding:15px 25px;
+    border-radius: 25px;
+}
+.section img{
+    width:10px;
+}
+h2{
+    color:#2D2D2D;
+    font-size: 28px;
+}
+.container{
+    padding:30px 60px;
+    background:#f4f4f4;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.searchBox{
+    display:flex;
+    gap:15px;
+    align-items: center;  
+    background-color:white;
+    padding:12px;
+    border-radius: 8px;
+}
+.searchBox span{
+    font-size:20px;
+}
+input{
+    outline: none;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 15px;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    padding:15px;
+    gap:10px;
+}
+.card > img{
+    width:auto;
+    aspect-ratio:3/2;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px rgb(216, 213, 213);
+
+}
+.bottom{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+p{
+    font-size:15px;
+    color:#898989;
+}
+.bottom img{
+    width:80px;
+    aspect-ratio: 1/1;
+}
+a{
+    color:#F05A22;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.selected-post{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.title{
+    display:flex;
+    align-items: center;
+    gap:15px;
+}
+.title span{
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding:5px;
+    box-shadow: 0px 0px 10px rgb(170, 167, 167);
+}
+.detailing{
+    display:flex;
+    gap:30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.detailing img{
+    width:300px;
+    aspect-ratio: 2.5/2;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgb(170, 167, 167);
+
+}
+.left{
+    display:flex;
+    flex-direction: column;
+}
+.left img{
+    width:350px;
+    aspect-ratio: 3/2.3;
+}
+.spec{
+    position:relative;
+    bottom:60px; 
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    color:white;
+}
+.icon{
+    font-size:10px;
+    display: flex;
+    gap:10px;
+    
+}
+.items{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.items .button{
+    display:flex;
+    gap:30px;
+}
+.btn{
+    padding:10px 15px;
+    background-color:white;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 8px;
+}
+.act{
+    padding:10px 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #F05A22;
+    color:white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media(max-width:498px){
+    .bar{
+        gap:10%;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .section{
+        gap:30px;
+        border-radius: 22px;
+    }
+    .container{
+        padding:20px 10px;
+    }
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        padding:10px 15px;
+    }
+    p{
+        font-size:10px;
+    }
+    .bottom img{
+        width:40px;
+    }
+    .title span{
+        font-size: 15px;
+    }
+    .detailing{
+        flex-direction:column;
+    }
+    .left img{
+        width:100%;
+        aspect-ratio: 3/2.3;
+    }
+    .items{
+        position:relative;
+        margin-top:-55px;
+        padding-left: 10px;
+    }
+    .items .button{
+        gap:20px;
+    }
+    .act{
+        padding:10px 15px;
+        font-weight: 600;
+        border-radius: 8px;
+        background-color: #F05A22;
+        color:white;
+    }
+
 }
